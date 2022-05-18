@@ -46,3 +46,14 @@ code {
   border: none;
   margin: 0;
 }
+
+.bahis-slider {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
