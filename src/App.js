@@ -1,51 +1,20 @@
 import './App.css';
 import { useState } from 'react';
+const { data } = require('./data');
 
 function App() {
   const [value, setValue] = useState(1000);
   const minValue = 200;
   const maxValue = 5000;
 
-  const masaHandler = (event) => {
-    console.log(event.target.value);
-  }
+  const [tip1, setTip1] = useState('Evet');
+  const [tip2, setTip2] = useState('Evet');
+  const [tip3, setTip3] = useState('Evet');
 
   const handleClick = () => {
     console.log("Butona basıldı");
+    console.log("Bahis: " + value + "\nHızlı: " + tip1 + "\nTeke Tek: " + tip2 + "\nRövanş: " + tip3)
   }
-
-  const data = [
-    {
-      bahis: "1000",
-      hizli: "evet",
-      teketek: "evet",
-      rovans: "evet",
-    },
-    {
-      bahis: "1500",
-      hizli: "evet",
-      teketek: "evet",
-      rovans: "hayir",
-    },
-    {
-      bahis: "3200",
-      hizli: "evet",
-      teketek: "hayir",
-      rovans: "evet",
-    },
-    {
-      bahis: "200",
-      hizli: "hayir",
-      teketek: "evet",
-      rovans: "evet",
-    },
-    {
-      bahis: "4000",
-      hizli: "hayir",
-      teketek: "hayir",
-      rovans: "evet",
-    }
-  ]
   
   return (
     <div className="App">
@@ -65,28 +34,31 @@ function App() {
           <div className="filters">
             <div className="filterContainer">
               <span>Hızlı</span>
-              <div className="filter" onChange={(e) => masaHandler(e)}>
-                <input type="radio" value="Hızlı Evet" /> Evet
-                <input type="radio" value="Hızlı Hayır" /> Hayır
+              <div className="filter" onChange={(e) => setTip1(e.target.value)}>
+                <input type="radio" name="masaTipi1" value="Evet" defaultChecked/> Evet
+                <input type="radio" name="masaTipi1" value="Hayır" /> Hayır
               </div>
             </div>
             <div className="filterContainer">
               <span>Teke Tek</span>
-              <div className="filter" onChange={(e) => masaHandler(e)}>
-                <input type="radio" value="Teke Tek Evet" /> Evet
-                <input type="radio" value="Teke Tek Hayır" /> Hayır
+              <div className="filter" onChange={(e) => setTip2(e.target.value)}>
+                <input type="radio" name="masaTipi2" value="Evet" defaultChecked/> Evet
+                <input type="radio" name="masaTipi2" value="Hayır" /> Hayır
               </div>
             </div>
             <div className="filterContainer">
               <span>Rövanş</span>
-              <div className="filter" onChange={(e) => masaHandler(e)}>
-                <input type="radio" value="Rövanş Evet" /> Evet
-                <input type="radio" value="Rövanş Hayır" /> Hayır
+              <div className="filter" onChange={(e) => setTip3(e.target.value)}>
+                <input type="radio" name="masaTipi3" value="Evet" defaultChecked/> Evet
+                <input type="radio" name="masaTipi3" value="Hayır" /> Hayır
               </div>
             </div>
           </div>
           <button className="save" onClick={handleClick}>Tamam</button>
           <div className="results">
+            {
+              
+            }
             {/* <div className="result">
               <span><b>Bahis:</b> 1000$</span>
               <br />
