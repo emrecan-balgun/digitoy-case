@@ -5,6 +5,43 @@ function App() {
   const [value, setValue] = useState(1000);
   const minValue = 200;
   const maxValue = 5000;
+
+  const masaHandler = (event) => {
+    console.log(event.target.value);
+  }
+
+  const data = [
+    {
+      bahis: "1000",
+      hizli: "evet",
+      teketek: "evet",
+      rovans: "evet",
+    },
+    {
+      bahis: "1500",
+      hizli: "evet",
+      teketek: "evet",
+      rovans: "hayir",
+    },
+    {
+      bahis: "3200",
+      hizli: "evet",
+      teketek: "hayir",
+      rovans: "evet",
+    },
+    {
+      bahis: "200",
+      hizli: "hayir",
+      teketek: "evet",
+      rovans: "evet",
+    },
+    {
+      bahis: "4000",
+      hizli: "hayir",
+      teketek: "hayir",
+      rovans: "evet",
+    }
+  ]
   
   return (
     <div className="App">
@@ -24,23 +61,23 @@ function App() {
           <div className="filters">
             <div className="filterContainer">
               <span>Hızlı</span>
-              <div className="filter">
-                <input type="radio" value="Evet" name="option1" /> Evet
-                <input type="radio" value="Hayır" name="option1" /> Hayır
+              <div className="filter" onChange={(e) => masaHandler(e)}>
+                <input type="radio" value="Hızlı Evet" /> Evet
+                <input type="radio" value="Hızlı Hayır" /> Hayır
               </div>
             </div>
             <div className="filterContainer">
               <span>Teke Tek</span>
-              <div className="filter">
-                <input type="radio" value="Evet" name="option2" /> Evet
-                <input type="radio" value="Hayır" name="option2" /> Hayır
+              <div className="filter" onChange={(e) => masaHandler(e)}>
+                <input type="radio" value="Teke Tek Evet" /> Evet
+                <input type="radio" value="Teke Tek Hayır" /> Hayır
               </div>
             </div>
             <div className="filterContainer">
               <span>Rövanş</span>
-              <div className="filter">
-                <input type="radio" value="Evet" name="option3" /> Evet
-                <input type="radio" value="Hayır" name="option3" /> Hayır
+              <div className="filter" onChange={(e) => masaHandler(e)}>
+                <input type="radio" value="Rövanş Evet" /> Evet
+                <input type="radio" value="Rövanş Hayır" /> Hayır
               </div>
             </div>
           </div>
