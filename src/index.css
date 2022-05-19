@@ -14,7 +14,7 @@ code {
 
 .container {
   width: 500px;
-  height: 350px;
+  height: 400px;
   border-radius: 0.5rem;
   border-color: black;
   border-style: solid;
@@ -83,7 +83,20 @@ code {
 }
 
 .save {
-  /* margin-top: 50px; */
   font-size: 18px;
   font-weight: bold;
+}
+
+.results {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
 }

@@ -10,6 +10,10 @@ function App() {
     console.log(event.target.value);
   }
 
+  const handleClick = () => {
+    console.log("Butona basıldı");
+  }
+
   const data = [
     {
       bahis: "1000",
@@ -81,7 +85,14 @@ function App() {
               </div>
             </div>
           </div>
-          <button className="save">Tamam</button>
+          <button className="save" onClick={handleClick}>Tamam</button>
+          <div className="results">
+            {/* <div className="result">
+              <span><b>Bahis:</b> 1000$</span>
+              <br />
+              <span><b>Masa Tipi:</b> Hızlı Evet, Teke Tek Evet</span>
+            </div> */}
+          </div>
         </div>
     </div>
   );
