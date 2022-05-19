@@ -14,14 +14,14 @@ code {
 
 .container {
   width: 500px;
-  height: 300px;
+  height: 350px;
   border-radius: 0.5rem;
   border-color: black;
   border-style: solid;
   border-width: 3px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
 }
@@ -47,6 +47,11 @@ code {
   margin: 0;
 }
 
+.tip {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .bahis-slider {
   padding: 20px;
   display: flex;
@@ -57,3 +62,28 @@ code {
   font-size: 18px;
 }
 
+.filters {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.filterContainer {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
+}
+
+.filterContainer span {
+  font-weight: bold;
+}
+
+.filter {
+  margin-top: 10px;
+}
+
+.save {
+  /* margin-top: 50px; */
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -14,19 +14,37 @@ function App() {
              <span className="header-text">X</span>
           </div>
           <hr className="hr"/>
+          <span className="tip">{value}$</span>
           <div className="bahis-slider">
               <span>Bahis Aralığı</span>
               <span className="value">Min {minValue}</span>
-              <input type="range" min={minValue} max={maxValue} value={value}/>
+              <input type="range" min={minValue} max={maxValue} value={value} onChange={(e) => setValue(e.target.value)}/>
               <span className="value">Max {maxValue}</span>
           </div>
           <div className="filters">
+            <div className="filterContainer">
+              <span>Hızlı</span>
               <div className="filter">
-                <span>Hızlı</span>
-                <input type="radio" name="range" />
+                <input type="radio" value="Evet" name="option1" /> Evet
+                <input type="radio" value="Hayır" name="option1" /> Hayır
               </div>
+            </div>
+            <div className="filterContainer">
+              <span>Teke Tek</span>
+              <div className="filter">
+                <input type="radio" value="Evet" name="option2" /> Evet
+                <input type="radio" value="Hayır" name="option2" /> Hayır
+              </div>
+            </div>
+            <div className="filterContainer">
+              <span>Rövanş</span>
+              <div className="filter">
+                <input type="radio" value="Evet" name="option3" /> Evet
+                <input type="radio" value="Hayır" name="option3" /> Hayır
+              </div>
+            </div>
           </div>
-          <hr />
+          <button className="save">Tamam</button>
         </div>
     </div>
   );
